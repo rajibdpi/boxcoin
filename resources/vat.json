@@ -1,0 +1,467 @@
+{
+  "has_more": true,
+  "rates_count": 35,
+  "rates": [
+    {
+      "abbreviation": "ABN",
+      "categories": {
+        "audiobook": 10,
+        "ebook": 10,
+        "eperiodical": 10
+      },
+      "country_code": "AU",
+      "country_name": "Australia",
+      "currency": "AUD",
+      "local_name": "Australian Business Number",
+      "member_state": false,
+      "reduced_rates": [
+        0
+      ],
+      "standard_rate": 10,
+      "vat_abbreviation": "GST",
+      "vat_local_name": "Goods and Services Tax"
+    },
+    {
+      "abbreviation": "UID",
+      "categories": {
+        "audiobook": 10,
+        "broadcasting": 10,
+        "ebook": 10,
+        "eperiodical": 10,
+        "eservice": 20,
+        "telecommunication": 20
+      },
+      "country_code": "AT",
+      "country_name": "Austria",
+      "currency": "EUR",
+      "local_name": "Umsatzsteuer-Identifikationsnummer",
+      "member_state": true,
+      "reduced_rates": [
+        10,
+        13
+      ],
+      "standard_rate": 20,
+      "vat_abbreviation": "MwSt.",
+      "vat_local_name": "Mehrwertsteuer"
+    },
+    {
+      "abbreviation": "BTW-nr",
+      "categories": {
+        "audiobook": 6,
+        "broadcasting": 21,
+        "ebook": 6,
+        "eperiodical": 6,
+        "eservice": 21,
+        "telecommunication": 21
+      },
+      "country_code": "BE",
+      "country_name": "Belgium",
+      "currency": "EUR",
+      "local_name": "BTW identificatienummer",
+      "member_state": true,
+      "reduced_rates": [
+        6,
+        12
+      ],
+      "standard_rate": 21,
+      "vat_abbreviation": "BTW",
+      "vat_local_name": "Belasting over de toegevoegde waarde"
+    },
+    {
+      "abbreviation": "ДДС номер",
+      "categories": {
+        "audiobook": 9,
+        "broadcasting": 20,
+        "ebook": 9,
+        "eperiodical": 9,
+        "eservice": 20,
+        "telecommunication": 20
+      },
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "currency": "BGN",
+      "local_name": "Идентификационен номер по ДДС",
+      "member_state": true,
+      "reduced_rates": [
+        0,
+        9
+      ],
+      "standard_rate": 20,
+      "vat_abbreviation": "ДДС",
+      "vat_local_name": "Данък добавена стойност"
+    },
+    {
+      "abbreviation": "PDV-ID",
+      "categories": {
+        "audiobook": 5,
+        "broadcasting": 25,
+        "ebook": 5,
+        "eperiodical": 5,
+        "eservice": 25,
+        "telecommunication": 25
+      },
+      "country_code": "HR",
+      "country_name": "Croatia",
+      "currency": "HRK",
+      "local_name": "Porez na dodanu vrijednost identifikacijski broj",
+      "member_state": true,
+      "reduced_rates": [
+        5,
+        13
+      ],
+      "standard_rate": 25,
+      "vat_abbreviation": "PDV",
+      "vat_local_name": "Porez na dodanu vrijednost"
+    },
+    {
+      "abbreviation": "ΦΠΑ",
+      "categories": {
+        "audiobook": 19,
+        "broadcasting": 19,
+        "ebook": 19,
+        "eperiodical": 19,
+        "eservice": 19,
+        "telecommunication": 19
+      },
+      "country_code": "CY",
+      "country_name": "Cyprus",
+      "currency": "EUR",
+      "local_name": "Αριθμός Εγγραφής Φ.Π.Α.",
+      "member_state": true,
+      "reduced_rates": [
+        5,
+        9
+      ],
+      "standard_rate": 19,
+      "vat_abbreviation": "ΦΠΑ",
+      "vat_local_name": "Φόρος Προστιθέμενης Αξίας"
+    },
+    {
+      "abbreviation": "DIČ",
+      "categories": {
+        "audiobook": 10,
+        "broadcasting": 21,
+        "ebook": 10,
+        "eperiodical": 10,
+        "eservice": 21,
+        "telecommunication": 21
+      },
+      "country_code": "CZ",
+      "country_name": "Czech Republic",
+      "currency": "CZK",
+      "local_name": "Daňové identifikační číslo",
+      "member_state": true,
+      "reduced_rates": [
+        10,
+        15
+      ],
+      "standard_rate": 21,
+      "vat_abbreviation": "DPH",
+      "vat_local_name": "Daň z přidané hodnoty"
+    },
+    {
+      "abbreviation": "CVR",
+      "categories": {
+        "audiobook": 25,
+        "broadcasting": 25,
+        "ebook": 25,
+        "eperiodical": 25,
+        "eservice": 25,
+        "telecommunication": 25
+      },
+      "country_code": "DK",
+      "country_name": "Denmark",
+      "currency": "DKK",
+      "local_name": "Momsregistreringsnummer",
+      "member_state": true,
+      "reduced_rates": [
+        0
+      ],
+      "standard_rate": 25,
+      "vat_abbreviation": "moms",
+      "vat_local_name": "Meromsætningsafgift"
+    },
+    {
+      "abbreviation": "KMKR",
+      "categories": {
+        "audiobook": 9,
+        "broadcasting": 20,
+        "ebook": 9,
+        "eperiodical": 9,
+        "eservice": 20,
+        "telecommunication": 20
+      },
+      "country_code": "EE",
+      "country_name": "Estonia",
+      "currency": "EUR",
+      "local_name": "Käibemaksukohustuslase number",
+      "member_state": true,
+      "reduced_rates": [
+        9
+      ],
+      "standard_rate": 20,
+      "vat_abbreviation": "km",
+      "vat_local_name": "käibemaks"
+    },
+    {
+      "abbreviation": "ALV nro",
+      "categories": {
+        "audiobook": 10,
+        "broadcasting": 24,
+        "ebook": 10,
+        "eperiodical": 10,
+        "eservice": 24,
+        "telecommunication": 24
+      },
+      "country_code": "FI",
+      "country_name": "Finland",
+      "currency": "EUR",
+      "local_name": "Arvonlisäveronumero",
+      "member_state": true,
+      "reduced_rates": [
+        10,
+        14
+      ],
+      "standard_rate": 24,
+      "vat_abbreviation": "ALV",
+      "vat_local_name": "Arvonlisävero"
+    },
+    {
+      "abbreviation": "n° TVA",
+      "categories": {
+        "audiobook": 5.5,
+        "broadcasting": 20,
+        "ebook": 5.5,
+        "eperiodical": 2.1,
+        "eservice": 20,
+        "telecommunication": 20
+      },
+      "country_code": "FR",
+      "country_name": "France",
+      "currency": "EUR",
+      "local_name": "Numéro d'identification à la taxe sur la valeur ajoutée",
+      "member_state": true,
+      "reduced_rates": [
+        2.1,
+        5.5,
+        10
+      ],
+      "standard_rate": 20,
+      "vat_abbreviation": "TVA",
+      "vat_local_name": "taxe sur la valeur ajoutée"
+    },
+    {
+      "abbreviation": "USt-IdNr.",
+      "categories": {
+        "audiobook": 7,
+        "broadcasting": 19,
+        "ebook": 7,
+        "eperiodical": 7,
+        "eservice": 19,
+        "telecommunication": 19
+      },
+      "country_code": "DE",
+      "country_name": "Germany",
+      "currency": "EUR",
+      "local_name": "Umsatzsteuer-Identifikationsnummer",
+      "member_state": true,
+      "reduced_rates": [
+        0,
+        7
+      ],
+      "standard_rate": 19,
+      "vat_abbreviation": "MwSt.",
+      "vat_local_name": "Mehrwertsteuer"
+    },
+    {
+      "abbreviation": "ΑΦΜ",
+      "categories": {
+        "audiobook": 6,
+        "broadcasting": 24,
+        "ebook": 6,
+        "eperiodical": 6,
+        "eservice": 24,
+        "telecommunication": 24
+      },
+      "country_code": "GR",
+      "country_name": "Greece",
+      "currency": "EUR",
+      "local_name": "Αριθμός Φορολογικού Μητρώου",
+      "member_state": true,
+      "reduced_rates": [
+        6,
+        13
+      ],
+      "standard_rate": 24,
+      "vat_abbreviation": "ΦΠΑ",
+      "vat_local_name": "Φόρος Προστιθέμενης Αξίας"
+    },
+    {
+      "abbreviation": "ANUM",
+      "categories": {
+        "audiobook": 27,
+        "broadcasting": 27,
+        "ebook": 27,
+        "eperiodical": 27,
+        "eservice": 27,
+        "telecommunication": 27
+      },
+      "country_code": "HU",
+      "country_name": "Hungary",
+      "currency": "HUF",
+      "local_name": "Közösségi adószám",
+      "member_state": true,
+      "reduced_rates": [
+        0,
+        5,
+        18
+      ],
+      "standard_rate": 27,
+      "vat_abbreviation": "áfa",
+      "vat_local_name": "általános forgalmi adó"
+    },
+    {
+      "abbreviation": "VAT ID no.",
+      "categories": {
+        "audiobook": 9,
+        "broadcasting": 23,
+        "ebook": 9,
+        "eperiodical": 9,
+        "eservice": 23,
+        "telecommunication": 23
+      },
+      "country_code": "IE",
+      "country_name": "Ireland",
+      "currency": "EUR",
+      "local_name": "Value added tax identification no.",
+      "member_state": true,
+      "reduced_rates": [
+        0,
+        4.8,
+        9,
+        13.5
+      ],
+      "standard_rate": 23,
+      "vat_abbreviation": "VAT",
+      "vat_local_name": "Value Added Tax"
+    },
+    {
+      "abbreviation": "P.IVA",
+      "categories": {
+        "audiobook": 4,
+        "broadcasting": 22,
+        "ebook": 4,
+        "eperiodical": 4,
+        "eservice": 22,
+        "telecommunication": 22
+      },
+      "country_code": "IT",
+      "country_name": "Italy",
+      "currency": "EUR",
+      "local_name": "Partita Imposta sul Valore Aggiunto",
+      "member_state": true,
+      "reduced_rates": [
+        4,
+        5,
+        10
+      ],
+      "standard_rate": 22,
+      "vat_abbreviation": "IVA",
+      "vat_local_name": "Imposta sul Valore Aggiunto"
+    },
+    {
+      "abbreviation": "PVN",
+      "categories": {
+        "audiobook": 5,
+        "broadcasting": 21,
+        "ebook": 5,
+        "eperiodical": 5,
+        "eservice": 21,
+        "telecommunication": 21
+      },
+      "country_code": "LV",
+      "country_name": "Latvia",
+      "currency": "EUR",
+      "local_name": "Pievienotās vērtības nodokļa reģistrācijas numurs",
+      "member_state": true,
+      "reduced_rates": [
+        0,
+        5,
+        12
+      ],
+      "standard_rate": 21,
+      "vat_abbreviation": "PVN",
+      "vat_local_name": "Pievienotās vērtības nodoklis"
+    },
+    {
+      "abbreviation": "MWST",
+      "categories": {
+        "audiobook": 2.5,
+        "broadcasting": 7.7,
+        "ebook": 2.5,
+        "eperiodical": 2.5,
+        "eservice": 7.7,
+        "telecommunication": 7.7
+      },
+      "country_code": "LI",
+      "country_name": "Liechtenstein",
+      "currency": "CHF",
+      "local_name": "Mehrwertsteuernummer",
+      "member_state": false,
+      "reduced_rates": [
+        2.5,
+        3.7
+      ],
+      "standard_rate": 7.7,
+      "vat_abbreviation": "MWST",
+      "vat_local_name": "Mehrwertsteuer"
+    },
+    {
+      "abbreviation": "PVM kodas",
+      "categories": {
+        "audiobook": 21,
+        "broadcasting": 21,
+        "ebook": 21,
+        "eperiodical": 21,
+        "eservice": 21,
+        "telecommunication": 21
+      },
+      "country_code": "LT",
+      "country_name": "Lithuania",
+      "currency": "EUR",
+      "local_name": "Pridėtinės vertės mokestis mokėtojo kodas",
+      "member_state": true,
+      "reduced_rates": [
+        5,
+        9
+      ],
+      "standard_rate": 21,
+      "vat_abbreviation": "PVM",
+      "vat_local_name": "Pridėtinės vertės mokestis"
+    },
+    {
+      "abbreviation": "No. TVA",
+      "categories": {
+        "audiobook": 3,
+        "broadcasting": 3,
+        "ebook": 3,
+        "eperiodical": 3,
+        "eservice": 17,
+        "telecommunication": 17
+      },
+      "country_code": "LU",
+      "country_name": "Luxembourg",
+      "currency": "EUR",
+      "local_name": "Numéro d'identification à la taxe sur la valeur ajoutée",
+      "member_state": true,
+      "reduced_rates": [
+        3,
+        8,
+        14
+      ],
+      "standard_rate": 17,
+      "vat_abbreviation": "TVA",
+      "vat_local_name": "Taxe sur la Valeur Ajoutée"
+    }
+  ]
+}

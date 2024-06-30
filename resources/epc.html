@@ -1,0 +1,66 @@
+<div class="bxc-box bxc-hide">
+    <div class="bxc-input">
+        <span>Enter your Envato Purchase Code</span>
+        <input type="text" />
+    </div>
+    <p>
+        Please enter your Envato Purchase Code to enter the administration area. You can only use it on up to 2 live domains and on localhost.
+        Save the code in Settings > Envato Purchase Code to to hide this message permanently.
+        <a class="btn-text" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" rel="nofollow" target="_blank">Where is my purchase code?</a>
+    </p>
+    <div id="bxc-button" href="#" class="bxc-btn">Activate</div>
+</div>
+<style>
+    .bxc-input {
+        display: block;
+    }
+
+    .bxc-input > span {
+        display: block;
+        width: auto;
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #566069;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    p a {
+        color: #566069;
+    }
+
+    .bxc-hide {
+        display: none;
+    }
+</style>
+<script>
+    let body;
+    let button;
+    document.addEventListener('DOMContentLoaded', () => {
+        body = _query(document.body);
+        button = _query('.bxc-btn');
+        bxcvpc('auto');
+        body.on('click', '.bxc-btn', function () {
+            bxcvpc(_query('.bxc-input input').val().trim());
+        });
+    });
+    function bxcvpc(code) {
+        if (!code) return;
+        if (button.hasClass('bxc-loading')) return;
+        button.addClass('bxc-loading');
+        BOXCoin.ajax('evc', { code: code, domain: BXC_URL }, (response) => {
+            if (response[0]) {
+                BOXCoin.cookie('TR_VUUKMILO', response[1], 3650, 'set');
+                location.reload();
+            } else {
+                if (response[1]) alert(response[1]);
+                button.removeClass('bxc-loading');
+                _query('.bxc-hide').removeClass('bxc-hide');
+            }
+        });
+    }
+
+</script>

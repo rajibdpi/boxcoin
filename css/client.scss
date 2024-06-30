@@ -1,0 +1,814 @@
+
+/*
+* 
+* ==========================================================
+* CLIENT.SCSS
+* ==========================================================
+*
+* Client side SCSS file
+*
+*/
+
+@import "shared.scss";
+
+.bxc-main {
+    max-width: 600px;
+    font-size: 15px;
+    text-align: left;
+
+    .bxc-btn, .bxc-btn.bxc-btn-border {
+        line-height: 32px;
+        height: 31px;
+    }
+
+    > div {
+        margin-top: 0 !important;
+    }
+
+    ::placeholder {
+        color: #9eacac;
+    }
+}
+
+.bxc-box {
+    margin: 0;
+    padding: 0;
+    color: $color-black;
+}
+
+.bxc-top {
+    max-width: 800px;
+    padding: 30px 20px;
+
+    .bxc-title {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & + .bxc-body {
+        border-top: 1px solid $border-color;
+    }
+}
+
+.bxc-countdown {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    position: relative;
+
+    & + .bxc-btn {
+        margin-left: 15px;
+    }
+
+    &:before, &:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        border-radius: 50%;
+        margin-top: -5px;
+        background-color: $color-red;
+        animation: bxc-pulse 1s ease-in-out infinite both;
+        display: none;
+    }
+
+    &:after {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        left: -40px;
+        animation: bxc-ping 1s ease-in-out infinite both;
+    }
+
+    &.bxc-countdown-expiring:before, &.bxc-countdown-expiring:after {
+        display: block;
+    }
+}
+
+.bxc-body {
+    padding: 30px 20px;
+
+    .bxc-title .bxc-text {
+        font-weight: 400;
+        margin-top: 5px;
+    }
+}
+
+.bxc-cnt {
+    text-align: center;
+
+    .bxc-title {
+        display: block;
+    }
+}
+
+.bxc-amount-fiat {
+    justify-content: center;
+
+    > div {
+        margin: 0 5px;
+    }
+
+    &:not(.bxc-donation) > div:first-child {
+        display: none;
+    }
+}
+
+.bxc-donation {
+    text-align: left;
+
+    #user-amount {
+        align-items: center;
+
+        span {
+            margin: 0 10px 0 60px;
+        }
+    }
+}
+
+.bxc-vat {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+    letter-spacing: .3px;
+
+    &:empty {
+        display: none;
+    }
+}
+
+.bxc-billing {
+    .bxc-title-1 {
+        margin-bottom: 30px;
+    }
+
+    .bxc-title-2 {
+        margin-top: 30px;
+    }
+
+    &.bxc-hidden {
+        display: none;
+    }
+}
+
+.bxc-payment-methods-cnt, .bxc-billing-cnt {
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.bxc-payment-methods-cnt > .bxc-title, .bxc-amount-fiat > .bxc-title {
+    white-space: nowrap;
+}
+
+.bxc-payment-methods-cnt {
+
+    .bxc-collapse {
+        > div:first-child {
+            height: 295px;
+        }
+
+        .bxc-collapse-btn {
+            display: block;
+        }
+    }
+}
+
+.bxc-payment-methods {
+
+    > div {
+        justify-content: flex-start;
+        padding: 5px 15px 5px 5px;
+        border: 1px solid $border-color;
+        border-radius: 40px;
+        cursor: pointer;
+        text-align: left;
+        transition: $transition;
+
+        img {
+            max-width: 30px;
+        }
+
+        img + span {
+            display: block;
+            padding: 0 10px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 17px;
+            letter-spacing: .1px;
+            white-space: nowrap;
+        }
+
+        span + span {
+            display: block;
+            font-size: 15px;
+            line-height: 15px;
+            min-width: 40px;
+            margin-left: auto;
+            color: $color-gray;
+            transition: $transition;
+        }
+
+        & + div {
+            margin-top: 10px;
+        }
+
+        &:hover, &:hover .bxc-label {
+            border-color: $color-main-hover;
+            color: $color-main;
+
+            span + span {
+                color: $color-main-hover;
+            }
+        }
+    }
+
+    [data-cryptocurrency="stripe"] > img, [data-cryptocurrency="verifone"] > img {
+        max-width: 74px;
+    }
+
+    .bxc-label {
+        display: inline;
+        border-color: $border-color;
+        background: $white;
+        z-index: 2;
+        position: relative;
+    }
+}
+
+.bxc-pay {
+    display: none;
+    animation: bxc-fade-in .5s;
+}
+
+.bxc-pay-cnt {
+    display: none;
+    animation: bxc-fade-in .5s;
+
+    .bxc-body {
+        padding: 0;
+
+        > div {
+            padding: 10px 20px;
+            border-top: 1px solid $border-color;
+        }
+
+        > div:first-child {
+            padding: 30px 20px;
+            border-top: none;
+        }
+    }
+
+    .bxc-top .bxc-title {
+        align-items: center;
+    }
+
+    .bxc-cnt {
+        display: none;
+    }
+
+    .bxc-pay {
+        display: block;
+    }
+}
+
+.bxc-pay-cnt-active {
+    .bxc-cnt {
+        display: none;
+    }
+
+    .bxc-pay-cnt {
+        display: block;
+    }
+}
+
+.bxc-qrcode {
+    max-width: 130px;
+}
+
+.bxc-qrcode-text {
+    padding: 0;
+    width: 100%;
+
+    img {
+        max-width: 35px;
+        margin-right: 15px;
+    }
+}
+
+img + .bxc-qrcode-text {
+    padding-left: 30px;
+    width: auto;
+}
+
+.bxc-pay-address, .bxc-pay-amount {
+    .bxc-title {
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: .3px;
+        margin: 5px 0 0 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .bxc-clipboard {
+        line-height: 37px;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        margin: 0 -7px 0 7px;
+    }
+
+    > div:first-child {
+        overflow: hidden;
+    }
+}
+
+.bxc-pay-top-back {
+    display: none;
+
+    .bxc-text {
+        margin-bottom: 15px;
+    }
+}
+
+.bxc-pay-top-main.bxc-hidden + .bxc-pay-top-back {
+    display: block;
+}
+
+.bxc-tx-cnt {
+    display: none;
+    text-align: center;
+    padding: 60px 0;
+
+    .bxc-loading {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 15px auto;
+
+        &:before {
+            line-height: 30px;
+            font-size: 30px;
+            color: $color-main;
+        }
+    }
+
+    .bxc-flex {
+        justify-content: center;
+        margin-top: 15px;
+        letter-spacing: .3px;
+
+        > div {
+            margin: 0 5px;
+        }
+    }
+}
+
+.bxc-tx-status {
+    background: $color-main;
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.bxc-tx-confirmations {
+    font-weight: 500;
+}
+
+.bxc-tx-cnt-active {
+    .bxc-tx-cnt {
+        display: block;
+    }
+
+    .bxc-cnt, .bxc-pay-cnt {
+        display: none;
+    }
+}
+
+.bxc-complete-cnt, .bxc-failed-cnt, .bxc-underpayment-cnt {
+    display: none;
+    text-align: center;
+    padding: 60px 30px;
+    animation: bxc-fade-in .5s;
+
+    > i {
+        color: $color-main;
+        font-size: 30px;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+}
+
+.bxc-failed-cnt, .bxc-underpayment-cnt {
+    > i {
+        color: $color-red;
+    }
+
+    .bxc-btn {
+        margin-top: 15px;
+    }
+}
+
+.bxc-complete-cnt-active, .bxc-failed-cnt-active, .bxc-underpayment-cnt-active {
+    .bxc-cnt {
+        display: none;
+    }
+}
+
+.bxc-complete-cnt-active {
+    .bxc-complete-cnt {
+        display: block;
+    }
+}
+
+.bxc-complete-cnt {
+    .bxc-order-processing span:first-child {
+        display: none;
+    }
+
+    .bxc-text:not(.bxc-order-processing) span:last-child {
+        display: none;
+    }
+}
+
+.bxc-failed-cnt-active {
+    .bxc-failed-cnt {
+        display: block;
+    }
+}
+
+.bxc-underpayment-cnt-active {
+    .bxc-underpayment-cnt {
+        display: block;
+    }
+}
+
+#bxc-expired-tx-id {
+    font-weight: 500;
+}
+
+.bxc-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bxc-fade-in .5s;
+    z-index: 9999995;
+}
+
+.bxc-popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999991;
+    background-color: rgba(227, 227, 227, .5);
+    animation: bxc-fade-in .5s;
+}
+
+.bxc-popup, .bxc-popup-overlay {
+    &:not(.bxc-active) {
+        display: none;
+    }
+}
+
+@media (min-width: 429px) {
+    .bxc-popup {
+        width: 600px;
+    }
+}
+
+.bxc-btn-popup {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+
+    img {
+        margin: 0 15px 0 0;
+        height: 20px;
+    }
+}
+
+.bxc-popup-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 10px;
+    opacity: .5;
+    cursor: pointer;
+    z-index: 9;
+    transition: $transition;
+
+    &:hover {
+        color: $color-red;
+        opacity: 1;
+    }
+}
+
+#user-amount {
+    justify-content: flex-end;
+
+    span {
+        width: auto;
+        min-width: 0;
+        margin-right: 30px;
+    }
+
+    input {
+        min-width: 150px;
+        width: 150px;
+    }
+}
+
+.bxc-error {
+    margin-bottom: 30px;
+    color: $color-red;
+    font-weight: 500;
+}
+
+[data-boxcoin]:empty {
+    min-height: 35px;
+}
+
+.bxc-billing {
+    position: relative;
+}
+
+.bxc-billing-cnt.bxc-flex .bxc-input + .bxc-input {
+    margin: 5px 0 0 0 !important;
+}
+
+#bxc-btn-invoice-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border: none !important;
+    background: none !important;
+
+    &:before {
+        font-size: 12px;
+    }
+}
+
+#bxc-btn-invoice.bxc-hidden {
+    display: none;
+}
+
+.bxc-collapse {
+    > div:first-child {
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(rgba(64,64,64,0), rgb(255, 255, 255));
+            z-index: 0;
+        }
+    }
+}
+
+.bxc-collapse-btn {
+    display: none;
+    text-align: center;
+    letter-spacing: .5px;
+    margin-top: 10px;
+
+    i {
+        font-size: 12px;
+        transform: translateY(1px);
+    }
+}
+
+.bxc-cloud-branding {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .3px;
+    opacity: .6;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 13px;
+    color: #000;
+
+    img {
+        height: 18px;
+        margin-left: 5px;
+        filter: grayscale(100%);
+    }
+}
+
+#metamask, #walletconnect, #metamask.bxc-loading:before, #walletconnect.bxc-loading:before {
+    color: #384242;
+}
+
+#metamask {
+    background: rgba(248, 132, 42, .2);
+    display: none;
+
+    &:hover {
+        background: rgba(248, 132, 42, .4);
+    }
+}
+
+#walletconnect {
+    background: rgba(31, 149, 252, .2);
+    display: none;
+
+    img {
+        left: 13px;
+    }
+
+    &:hover {
+        background: rgba(31, 149, 252, .4);
+    }
+}
+
+[data-active="eth"], [data-active="usdt"], [data-active="usdc"], [data-active="link"], [data-active="shib"], [data-active="bat"] {
+    #metamask {
+        display: block;
+    }
+}
+
+/* 
+
+# RTL
+==========================================================
+
+*/
+
+.bxc-rtl, .bxc-rtl textarea, .bxc-rtl input, .bxc-rtl ul, .bxc-rtl ul li {
+    direction: rtl;
+    text-align: right;
+}
+
+.bxc-rtl {
+    .bxc-payment-methods {
+        padding-left: 0;
+        right: 50px;
+
+        > div {
+            padding: 5px 5px 5px 15px;
+
+            img + span {
+                text-align: right;
+            }
+        }
+    }
+
+    .bxc-countdown + .bxc-btn, .bxc-btn + .bxc-btn {
+        margin-right: 15px;
+        margin-left: 0;
+    }
+
+    .bxc-qrcode-text img {
+        margin-left: 35px;
+        margin-right: 0;
+    }
+
+    .bxc-countdown:after {
+        left: auto;
+        right: -40px;
+    }
+
+    .bxc-countdown:before {
+        left: auto;
+        right: -30px;
+    }
+
+    .bxc-btn-popup img {
+        margin: 0 0 0 15px;
+    }
+}
+/* 
+
+# RESPONSIVE
+==========================================================
+
+*/
+@media (min-width: 600px) {
+    .bxc-payment-methods > div img + span {
+        width: 265px;
+    }
+}
+
+@media (max-width: 428px) {
+    .bxc-main {
+        text-align: center;
+    }
+
+    .bxc-top .bxc-title, .bxc-payment-methods-cnt {
+        display: block;
+    }
+
+    .bxc-amount-fiat {
+        justify-content: center;
+
+        > div {
+            margin: 0 5px;
+        }
+    }
+
+    .bxc-donation {
+        display: block;
+        text-align: center;
+
+        #user-amount {
+            margin-top: 15px;
+            justify-content: center;
+
+            span {
+                margin: 0 10px 0 0;
+                text-align: right;
+                display: inline-block;
+                flex-grow: 0;
+            }
+        }
+    }
+
+    .bxc-payment-methods {
+        padding: 0;
+        margin: 0 auto;
+
+        > div {
+            overflow: hidden;
+
+            img + span {
+                max-width: 65%;
+            }
+        }
+    }
+
+    .bxc-pay-amount {
+        > .bxc-flex {
+            display: block;
+        }
+
+        #metamask {
+            margin: 15px 0 0 0;
+        }
+    }
+
+    .bxc-pay-top-main {
+        .bxc-title .bxc-flex {
+            margin-top: 20px;
+            justify-content: center;
+
+            > div {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .bxc-pay-cnt .bxc-body > div:first-child {
+        display: block;
+    }
+
+    .bxc-qrcode {
+        margin: 0 auto 30px auto;
+    }
+
+    .bxc-pay-address, .bxc-pay-amount {
+        display: block;
+        position: relative;
+
+        .bxc-clipboard {
+            margin: 5px auto 0 auto;
+            display: block;
+        }
+    }
+
+    .bxc-qrcode-text, .bxc-pay-address, .bxc-pay-amount {
+        justify-content: center;
+    }
+
+    .bxc-qrcode-text {
+        padding-left: 0 !important;
+        display: block;
+
+        img {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    .bxc-payment-methods-cnt .bxc-collapse-btn {
+        padding-left: 0 !important;
+    }
+
+    [data-active="eth"], [data-active="usdt"], [data-active="usdc"], [data-active="link"], [data-active="shib"], [data-active="bat"] {
+        #metamask {
+            display: inline-block;
+        }
+    }
+}
